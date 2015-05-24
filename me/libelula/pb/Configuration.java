@@ -137,6 +137,10 @@ public class Configuration
             flags.put(df, StateFlag.State.DENY);
           } else if (this.fc.getString("ps-default.flags.".concat(key)).equalsIgnoreCase("allow")) {
             flags.put(df, StateFlag.State.ALLOW);
+            } else if (this.fc.getString("ps-default.flags.".concat(key)).equalsIgnoreCase("member")) {
+            flags.put(df, StateFlag.State.MEMBERS);
+          } else if (this.fc.getString("ps-default.flags.".concat(key)).equalsIgnoreCase("nonmember")) {
+            flags.put(df, StateFlag.State.NON_MEMBERS);
           } else {
             flags.put(df, this.fc.getString("ps-default.flags.".concat(key)).replace("%player%", player));
           }

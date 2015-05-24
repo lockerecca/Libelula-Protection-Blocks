@@ -495,6 +495,12 @@ public class ProtectionBlocks
     case "deny": 
       psb.region.setFlag(flag, StateFlag.State.DENY);
       break;
+    case "nonmembers":
+      psb.region.setFlag(flag, StateFlag.State.NON_MEMBERS);
+      break;
+    case "members":
+      psb.region.setFlag(flag, StateFlag.State.MEMBERS);
+      break;
     default: 
       switch (flag.getName().toLowerCase())
       {

@@ -9,12 +9,14 @@
 #   and see if it gives "ERROR:".
 # * Lines starting with # are commentsand so they are ignored.
 # -
+# new nonmembers members
  
 ps-default:
   flags:
     greeting: "&yYou are entering into the &Y%player%'s&y protected area."
     farewell: "&yYou are leaving the &Y%player%'s&y protected area."
     use: deny
+    use-group: nonmembers
 player:
   configurable-flags:
   - build
